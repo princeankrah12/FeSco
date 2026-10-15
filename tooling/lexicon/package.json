@@ -1,0 +1,17 @@
+{
+  "name": "@fesco/lexicon",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Enforces the FeSCo Platform Data Dictionary: blocks commercial-transport terminology in code, schema, API routes, and UI copy.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./eslint": "./src/eslint-plugin.mjs"
+  },
+  "bin": {
+    "fesco-lexicon": "./bin/fesco-lexicon.mjs"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
+  }
+}

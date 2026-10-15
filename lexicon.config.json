@@ -1,0 +1,6 @@
+{
+  "extensions": [".ts", ".tsx", ".js", ".mjs", ".cjs", ".json", ".sql", ".md", ".yml", ".yaml", ".env.example"],
+  "ignoreDirs": ["node_modules", "dist", "build", "coverage", ".expo", ".git", "android", "ios"],
+  "ignoreFiles": ["package-lock.json"],
+  "allowlist": ["tooling/lexicon/**", "docs/LEXICON.md"]
+}

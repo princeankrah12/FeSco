@@ -1,0 +1,24 @@
+{
+  "name": "fesco",
+  "private": true,
+  "description": "FeSCo (Fuel Share Commute) - not-for-profit commute cost-sharing platform for verified corporate professionals in Accra.",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build:packages": "npm run build -w @fesco/tokens -w @fesco/domain",
+    "lint:lexicon": "node tooling/lexicon/bin/fesco-lexicon.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "verify": "npm run lint:lexicon && npm run build:packages && npm run typecheck && npm run test",
+    "api:dev": "npm run start:dev -w @fesco/api",
+    "mobile:dev": "npm run start -w @fesco/mobile",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down"
+  }
+}

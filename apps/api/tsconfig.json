@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@fesco/domain": ["../../packages/domain/dist/index.d.ts"],
+      "@fesco/tokens": ["../../packages/tokens/dist/index.d.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}
